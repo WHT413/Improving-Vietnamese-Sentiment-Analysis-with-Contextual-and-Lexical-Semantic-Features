@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1240" viewBox="0 0 1000 1240">
+  <defs>
+    <marker id="blueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#173f63"/></marker>
+    <marker id="orangeArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#b2601d"/></marker>
+    <marker id="tealArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#167c78"/></marker>
+    <style>
+      .title{font:700 29px Arial,sans-serif;fill:#173f63}.subtitle{font:20px Arial,sans-serif;fill:#667788}
+      .head{font:700 21px Arial,sans-serif;fill:#173f63}.body{font:18px Arial,sans-serif;fill:#667788}
+      .math{font:italic 22px Georgia,serif;fill:#173f63}.small{font:16px Arial,sans-serif;fill:#667788}
+      .blue{stroke:#173f63;stroke-width:3;fill:none}.orange{stroke:#b2601d;stroke-width:3;fill:none;stroke-dasharray:10 8}.teal{stroke:#167c78;stroke-width:3;fill:none}
+    </style>
+  </defs>
+  <rect width="1000" height="1240" fill="white"/>
+  <text x="500" y="45" text-anchor="middle" class="title">TWO-BRANCH ADAPTIVE FUSION</text>
+  <text x="500" y="78" text-anchor="middle" class="subtitle">Phân tích cảm xúc tiếng Việt</text>
+
+  <rect x="270" y="105" width="460" height="65" rx="12" fill="#edf4fa" stroke="#173f63" stroke-width="3"/>
+  <text x="500" y="145" text-anchor="middle" class="head">Văn bản đầu vào</text>
+  <path d="M500 170 V205" class="blue" marker-end="url(#blueArrow)"/>
+
+  <rect x="145" y="205" width="710" height="92" rx="12" fill="white" stroke="#173f63" stroke-width="3"/>
+  <text x="500" y="245" text-anchor="middle" class="head">Tiền xử lý văn bản</text>
+  <text x="500" y="275" text-anchor="middle" class="body">Chuẩn hóa biến thể • Rút gọn ký tự lặp • Tách từ</text>
+  <path d="M500 297 V330 H275 V350" class="blue" marker-end="url(#blueArrow)"/>
+  <path d="M500 330 H725 V350" class="orange" marker-end="url(#orangeArrow)"/>
+
+  <rect x="55" y="350" width="440" height="130" rx="12" fill="#edf4fa" stroke="#173f63" stroke-width="3"/>
+  <text x="275" y="390" text-anchor="middle" class="head">NHÁNH NGỮ CẢNH</text>
+  <text x="275" y="423" text-anchor="middle" class="head">PhoBERT-base</text>
+  <text x="275" y="454" text-anchor="middle" class="body">BPE tokenizer + Transformer • d = 768</text>
+
+  <rect x="505" y="350" width="440" height="130" rx="12" fill="#fff5ea" stroke="#b2601d" stroke-width="3"/>
+  <text x="725" y="390" text-anchor="middle" class="head" fill="#b2601d">NHÁNH TỪ VỰNG</text>
+  <text x="725" y="423" text-anchor="middle" class="head">Lexicon Lookup</text>
+  <text x="725" y="454" text-anchor="middle" class="body">Lexicon mở rộng • Đặc trưng đa chiều</text>
+
+  <path d="M275 480 V510" class="blue" marker-end="url(#blueArrow)"/>
+  <path d="M725 480 V510" class="orange" marker-end="url(#orangeArrow)"/>
+  <rect x="125" y="510" width="300" height="58" rx="10" fill="#edf4fa" stroke="#173f63" stroke-width="3"/>
+  <text x="275" y="548" text-anchor="middle" class="math">hᵢ ∈ ℝᵈ</text>
+  <rect x="575" y="510" width="300" height="58" rx="10" fill="#fff5ea" stroke="#b2601d" stroke-width="3"/>
+  <text x="725" y="548" text-anchor="middle" class="math" fill="#b2601d">lᵢ ∈ ℝᵏ</text>
+
+  <path d="M725 568 V595" class="orange" marker-end="url(#orangeArrow)"/>
+  <rect x="545" y="595" width="360" height="92" rx="10" fill="#fff5ea" stroke="#b2601d" stroke-width="3"/>
+  <text x="725" y="630" text-anchor="middle" class="head">Feature Alignment</text>
+  <text x="725" y="663" text-anchor="middle" class="math" fill="#b2601d">l̃ᵢ = Wₚᵣₒⱼ lᵢ + bₚᵣₒⱼ</text>
+
+  <path d="M275 568 V735 H385 V760" class="blue" marker-end="url(#blueArrow)"/>
+  <path d="M725 687 V735 H615 V760" class="orange" marker-end="url(#orangeArrow)"/>
+  <text x="294" y="713" class="small" fill="#173f63">hᵢ vào gate</text>
+  <text x="666" y="713" class="small" fill="#b2601d">l̃ᵢ vào gate</text>
+
+  <rect x="300" y="760" width="400" height="110" rx="12" fill="#eaf7f5" stroke="#167c78" stroke-width="3"/>
+  <text x="500" y="800" text-anchor="middle" class="head" fill="#167c78">Learnable Gate</text>
+  <text x="500" y="834" text-anchor="middle" class="math">gᵢ = σ(Wg[hᵢ ; l̃ᵢ] + bg)</text>
+  <text x="500" y="858" text-anchor="middle" class="small">Chỉ tạo hệ số điều tiết gᵢ</text>
+
+  <rect x="250" y="1000" width="500" height="115" rx="12" fill="#eaf7f5" stroke="#167c78" stroke-width="3"/>
+  <text x="500" y="1040" text-anchor="middle" class="head" fill="#167c78">Residual Feature Fusion</text>
+  <text x="500" y="1075" text-anchor="middle" class="math">fᵢ = hᵢ + gᵢ ⊙ l̃ᵢ</text>
+  <text x="500" y="1099" text-anchor="middle" class="small">Nhận trực tiếp hᵢ, l̃ᵢ và hệ số gᵢ</text>
+
+  <!-- The gate output is the only arrow from Gate to Fusion. -->
+  <path d="M500 870 V1000" class="teal" marker-end="url(#tealArrow)"/>
+  <text x="520" y="936" class="small" fill="#167c78">gᵢ</text>
+  <!-- Residual bypasses: h_i and l_tilde_i intentionally skip the gate. -->
+  <path d="M275 568 V925 H350 V1000" class="blue" marker-end="url(#blueArrow)"/>
+  <path d="M725 687 V925 H650 V1000" class="orange" marker-end="url(#orangeArrow)"/>
+  <rect x="240" y="940" width="205" height="30" rx="6" fill="white"/>
+  <text x="342" y="961" text-anchor="middle" class="small" fill="#173f63">hᵢ truyền thẳng vào phép cộng</text>
+  <rect x="555" y="940" width="250" height="30" rx="6" fill="white"/>
+  <text x="680" y="961" text-anchor="middle" class="small" fill="#b2601d">gᵢ ⊙ l̃ᵢ: tín hiệu sau điều tiết</text>
+
+  <path d="M500 1115 V1150" class="teal" marker-end="url(#tealArrow)"/>
+  <rect x="145" y="1150" width="710" height="58" rx="10" fill="#edf4fa" stroke="#173f63" stroke-width="3"/>
+  <text x="500" y="1185" text-anchor="middle" class="head">Aggregation → Linear + Softmax → Pos / Neu / Neg</text>
+</svg>
