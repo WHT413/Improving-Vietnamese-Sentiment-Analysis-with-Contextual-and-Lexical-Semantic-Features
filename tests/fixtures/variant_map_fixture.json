@@ -1,0 +1,16 @@
+{
+  "version": "fixture-1.0.0",
+  "review_status": "synthetic-test-only",
+  "source": "synthetic fixture for unit tests; not research data",
+  "entries": {
+    "sp": "sản phẩm",
+    "ko": "không",
+    "k": "không",
+    "chất lg": "chất lượng",
+    "lg": "XXX",
+    "đc": "được",
+    "a": "b",
+    "b": "c",
+    "c++": "cpp"
+  }
+}
