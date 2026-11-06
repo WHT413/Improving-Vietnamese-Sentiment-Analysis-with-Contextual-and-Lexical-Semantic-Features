@@ -1,0 +1,7 @@
+{
+  "version": "fixture-duplicates",
+  "entries": [
+    {"key": "SP", "target": "sản phẩm"},
+    {"key": " sp ", "target": "sản phẩm khác"}
+  ]
+}
