@@ -1,0 +1,1 @@
+"""Offline build pipeline for the 12-dimensional composite lexicon."""

@@ -1,3 +1,5 @@
+"""PhoBERT branch: tokenizer + encoder assembly."""
+
 from collections.abc import Sequence
 
 import torch
@@ -9,7 +11,7 @@ from .batch import MAX_LENGTH, build_batch
 from .encoder import PhoBertEncoder
 
 
-class PhoBertBackbone(nn.Module):
+class PhoBertBranch(nn.Module):
     def __init__(self, tokenizer, encoder: PhoBertEncoder):
         super().__init__()
         self.tokenizer = tokenizer

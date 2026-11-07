@@ -1,1 +1,1 @@
-"""Deterministic fake tokenizer for backbone unit tests."""
+"""Deterministic fake tokenizer for PhoBERT branch unit tests."""

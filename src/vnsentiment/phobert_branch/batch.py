@@ -1,3 +1,5 @@
+"""Build PhoBERT word/subword batches with masks and word ids."""
+
 from collections.abc import Sequence
 
 import torch

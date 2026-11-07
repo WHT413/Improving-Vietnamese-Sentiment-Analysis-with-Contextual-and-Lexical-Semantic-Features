@@ -2,9 +2,9 @@ import unittest
 
 import torch
 
-from vnsentiment.backbones.backbone import PhoBertBackbone
-from vnsentiment.backbones.batch import MAX_LENGTH, build_batch
-from vnsentiment.backbones.encoder import PhoBertEncoder
+from vnsentiment.phobert_branch.branch import PhoBertBranch
+from vnsentiment.phobert_branch.batch import MAX_LENGTH, build_batch
+from vnsentiment.phobert_branch.encoder import PhoBertEncoder
 from tests.helpers.fake_encoder import FakeEncoder
 from tests.helpers.fake_tokenizer import FakeTokenizer
 
@@ -121,19 +121,19 @@ class BuildBatchTests(unittest.TestCase):
         self.assertEqual(MAX_LENGTH, 256)
 
 
-class BackboneTests(unittest.TestCase):
+class PhoBertBranchTests(unittest.TestCase):
     def setUp(self):
         self.tokenizer = FakeTokenizer(SIMPLE_PIECES)
         self.encoder = PhoBertEncoder(model=FakeEncoder(hidden_size=4), device="cpu")
-        self.backbone = PhoBertBackbone(self.tokenizer, self.encoder)
+        self.branch = PhoBertBranch(self.tokenizer, self.encoder)
 
     def test_encode_returns_batch_and_hidden(self):
-        batch, hidden = self.backbone.encode(["sản_phẩm này"])
+        batch, hidden = self.branch.encode(["sản_phẩm này"])
         self.assertEqual(batch.input_ids.shape, (1, 5))
         self.assertEqual(tuple(hidden.shape), (1, 5, 4))
 
     def test_encode_handles_multiple_texts(self):
-        batch, hidden = self.backbone.encode(["sản_phẩm này", "này"])
+        batch, hidden = self.branch.encode(["sản_phẩm này", "này"])
         self.assertEqual(batch.input_ids.shape, (2, 5))
         self.assertEqual(tuple(hidden.shape), (2, 5, 4))
 
@@ -143,7 +143,7 @@ class BackboneTests(unittest.TestCase):
             lambda _module, inputs, output: calls.append((inputs[0], output))
         )
         try:
-            batch, hidden = self.backbone.encode(["sản_phẩm này"])
+            batch, hidden = self.branch.encode(["sản_phẩm này"])
         finally:
             handle.remove()
         self.assertEqual(len(calls), 1)
@@ -157,36 +157,36 @@ class BackboneTests(unittest.TestCase):
         self.assertEqual(encoder.hidden_size, 4)
         self.assertEqual(tuple(hidden.shape), (1, 4, 4))
 
-    def test_backbone_registers_encoder_parameters(self):
-        backbone = PhoBertBackbone(
+    def test_branch_registers_encoder_parameters(self):
+        branch = PhoBertBranch(
             self.tokenizer, PhoBertEncoder(model=FakeEncoder(hidden_size=4), device="cpu")
         )
-        self.assertIsInstance(backbone, torch.nn.Module)
-        self.assertTrue(list(backbone.parameters()))
-        self.assertIn("encoder.model.scale", backbone.state_dict())
+        self.assertIsInstance(branch, torch.nn.Module)
+        self.assertTrue(list(branch.parameters()))
+        self.assertIn("encoder.model.scale", branch.state_dict())
 
     def test_train_eval_propagate_to_encoder(self):
-        backbone = PhoBertBackbone(
+        branch = PhoBertBranch(
             self.tokenizer, PhoBertEncoder(model=FakeEncoder(hidden_size=4), device="cpu")
         )
-        backbone.train()
-        self.assertTrue(backbone.encoder.training)
-        self.assertTrue(backbone.encoder.model.training)
-        backbone.eval()
-        self.assertFalse(backbone.encoder.training)
-        self.assertFalse(backbone.encoder.model.training)
+        branch.train()
+        self.assertTrue(branch.encoder.training)
+        self.assertTrue(branch.encoder.model.training)
+        branch.eval()
+        self.assertFalse(branch.encoder.training)
+        self.assertFalse(branch.encoder.model.training)
 
     def test_backward_updates_encoder_parameter(self):
-        backbone = PhoBertBackbone(
+        branch = PhoBertBranch(
             self.tokenizer, PhoBertEncoder(model=FakeEncoder(hidden_size=4), device="cpu")
         )
-        backbone.zero_grad()
-        _, hidden = backbone.encode(["sản_phẩm này"])
+        branch.zero_grad()
+        _, hidden = branch.encode(["sản_phẩm này"])
         hidden.sum().backward()
-        scale = backbone.encoder.model.scale
+        scale = branch.encoder.model.scale
         self.assertIsNotNone(scale.grad)
         before = scale.detach().clone()
-        optimizer = torch.optim.SGD(backbone.parameters(), lr=0.1)
+        optimizer = torch.optim.SGD(branch.parameters(), lr=0.1)
         optimizer.step()
         self.assertFalse(torch.equal(before, scale.detach()))
 

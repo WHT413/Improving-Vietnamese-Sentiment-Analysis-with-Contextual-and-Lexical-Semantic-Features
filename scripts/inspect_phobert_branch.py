@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""In input tensors của PhoBERT backbone cho câu đã word-segmented."""
+"""In input tensors của PhoBERT branch cho câu đã word-segmented."""
 
 from __future__ import annotations
 
@@ -10,8 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from vnsentiment.backbones.batch import build_batch  # noqa: E402
-from vnsentiment.backbones.tokenizer import load_phobert_tokenizer  # noqa: E402
+from vnsentiment.phobert_branch.batch import build_batch  # noqa: E402
+from vnsentiment.phobert_branch.tokenizer import load_phobert_tokenizer  # noqa: E402
 from vnsentiment.preprocessing.pipeline import (  # noqa: E402
     PreprocessingPipeline,
     RawSample,

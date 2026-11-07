@@ -1,1 +1,1 @@
-"""Test-only helpers for offline backbone tests."""
+"""Test-only helpers for offline PhoBERT branch tests."""

@@ -1,0 +1,337 @@
+{
+  "hay": {
+    "pos_sense_id": "a#001937972",
+    "score": 0.5,
+    "rationale": "Select standalone sense hay#1 (+0.5, 'cô ấy hát hay'); -0.6 is fragment of negated phrase 'không_được hay#4'."
+  },
+  "tốt": {
+    "pos_sense_id": "v#02748627",
+    "score": 0.875,
+    "rationale": "Select standalone sense tốt#31 (+0.875, 'gỗ làm đồ nội thất tốt'); -1.0 is fragment of negated phrase 'không tốt#10' and +0.75 is fragment of comparative 'tốt nhất#2'."
+  },
+  "khó": {
+    "pos_sense_id": "a#02451951",
+    "score": -0.75,
+    "rationale": "Select standalone sense khó#1 (-0.75, 'vấn đề khó nhất'); other 4 candidates are multi-word phrase fragments ('khó sờ_thấy#3', 'khó nắm_bắt#1', 'thật khó lắm thay#1', 'rất khó chấp_nhận#1')."
+  },
+  "quan_tâm": {
+    "pos_sense_id": "v#01824736",
+    "score": 0.125,
+    "rationale": "Select standalone sense quan_tâm#3 (+0.125, 'thích hoặc ước làm điều gì đó'); +0.375 is fragment of negated imperative 'đừng quá quan_tâm#1'."
+  },
+  "thân_thiện": {
+    "pos_sense_id": "a#01246579",
+    "score": 0.875,
+    "rationale": "Select standalone sense thân_thiện#1 (+0.875, 'Người Lào khá thân thiện'); -0.75 is fragment of negated phrase 'không thân_thiện#2'."
+  },
+  "chất_lượng": {
+    "pos_sense_id": "a#01914521",
+    "score": 0.5,
+    "rationale": "Select standalone sense chất_lượng#1 (+0.5); -0.625 is fragment of negative phrase 'chất_lượng kém#3'."
+  },
+  "phù_hợp": {
+    "pos_sense_id": "v#02291135",
+    "score": 0.875,
+    "rationale": "Select standalone sense phù_hợp#6 (+0.875, 'dễ chịu'); -0.75 is mis-scored phrase fragment 'phù_hợp với#3' and +0.5 is fragment of 'phù_hợp mong_muốn#2'."
+  },
+  "hoạt_động": {
+    "pos_sense_id": "a#00031974",
+    "score": 0.375,
+    "rationale": "Select standalone sense hoạt_động#5 (+0.375, 'đặc trưng bởi các hoạt động năng động'); -0.5 is fragment of negated phrase 'không hoạt_động#2'."
+  },
+  "hài_lòng": {
+    "pos_sense_id": "a#01805801",
+    "score": 0.5,
+    "rationale": "Select standalone sense hài_lòng#1 (+0.5, 'Tôi hài lòng trước những thành quả đã đạt được'); -0.625 is fragment of 'không hài_lòng#1' and -0.25 is fragment of 'tự hài_lòng#1'."
+  },
+  "khó_khăn": {
+    "pos_sense_id": "a#01127302",
+    "score": -0.625,
+    "rationale": "Select standalone sense khó_khăn#8 (-0.625, 'cuộc sống khó khăn'); -0.6 is fragment of 'khó_khăn đến_thế#1'."
+  },
+  "mất": {
+    "pos_sense_id": "a#01956855",
+    "score": -0.5,
+    "rationale": "Select standalone sense mất#5 (-0.5, 'mất danh dự'); -0.625 is fragment of 'mất bình_tĩnh#1'."
+  },
+  "không_thể": {
+    "pos_sense_id": "a#00002098",
+    "score": -0.75,
+    "rationale": "Select standalone sense không_thể#1 (-0.75, 'không đủ khả năng hoặc điều kiện làm việc gì'); other 15 candidates are prefix fragments of 'không_thể ...' phrases."
+  },
+  "sai": {
+    "pos_sense_id": "v#02513989",
+    "score": -0.75,
+    "rationale": "Select standalone sense sai#1 (-0.75, 'làm sai trái'); -0.625 is fragment of 'sai sự_thật#1'."
+  },
+  "kém": {
+    "pos_sense_id": "a#01224253",
+    "score": -0.625,
+    "rationale": "Select sense kém#3 (-0.625, 'kém chất lượng'); all 3 candidates are negative (-0.625, -0.375) and a#01224253 carries the explicit sense tag kém#3."
+  },
+  "quan_trọng": {
+    "pos_sense_id": "a#00649586",
+    "score": 0.5,
+    "rationale": "Select standalone sense quan_trọng#3 (+0.5); -0.5 is fragment of negated phrase 'không quan_trọng#1'."
+  },
+  "lỗi": {
+    "pos_sense_id": "a#01752953",
+    "score": -0.5,
+    "rationale": "Select standalone sense lỗi#1 (-0.5, 'có một khiếm khuyết'); -0.6 is fragment of 'không chỉ có lỗi#1'."
+  },
+  "hấp_dẫn": {
+    "pos_sense_id": "a#00166146",
+    "score": 0.875,
+    "rationale": "Select standalone sense hấp_dẫn#1 (+0.875, 'thích nhìn, say mê vẻ đẹp'); -0.375 is fragment of 'kém hấp_dẫn#1'."
+  },
+  "hạn_chế": {
+    "pos_sense_id": "a#00558373",
+    "score": -0.75,
+    "rationale": "Select standalone sense hạn_chế#2 (-0.75, 'tầm nhìn còn hạn chế'); +0.5 is fragment of negated phrase 'không hạn_chế#2'."
+  },
+  "hoàn_thành": {
+    "pos_sense_id": "v#000788554",
+    "score": 0.5,
+    "rationale": "Select standalone sense hoàn_thành#1 (+0.5, 'làm xong một cách đầy đủ'); -0.625 is fragment of negated phrase 'chưa hoàn_thành#1'."
+  },
+  "dễ_chịu": {
+    "pos_sense_id": "a#00089051",
+    "score": 0.5,
+    "rationale": "Select standalone sense dễ_chịu#1 (+0.5, 'một cách dễ chịu'); +0.75 is fragment of 'mùi dễ_chịu#1'."
+  },
+  "mong_muốn": {
+    "pos_sense_id": "a#00732960",
+    "score": 0.5,
+    "rationale": "Select standalone sense mong_muốn#1 (+0.5, 'một kết quả mong muốn'); +0.625 is fragment of 'như mong_muốn#1'."
+  },
+  "tệ": {
+    "pos_sense_id": "a#00422374",
+    "score": -0.625,
+    "rationale": "Select standalone sense tệ#2 (-0.625, 'một hành động tệ hại'); +0.5 is fragment of negated phrase 'không tệ#1' and -0.5 is fragment of 'tệ nhất#1'."
+  },
+  "sợ": {
+    "pos_sense_id": "a#00077645",
+    "score": -0.5,
+    "rationale": "Select standalone sense sợ#1 (-0.5, 'lo lắng về cái gì đó'); -0.375 is fragment of 'thấy sợ#1'."
+  },
+  "sáng": {
+    "pos_sense_id": "a#01121238",
+    "score": 0.5,
+    "rationale": "Select standalone sense sáng#6 (+0.5, 'một điểm sáng trong lịch sử'); +0.625 is fragment of 'tỏa sáng#9 bừng sáng#6'."
+  },
+  "phức_tạp": {
+    "pos_sense_id": "a#00899612",
+    "score": -0.375,
+    "rationale": "Select standalone sense phức_tạp#1 (-0.375); +0.125 is fragment of negated phrase 'không phức_tạp#2'."
+  },
+  "buồn": {
+    "pos_sense_id": "a#011217585",
+    "score": -0.875,
+    "rationale": "Select core negative sense a#011217585 (-0.875, 'gây cảm giác không vui; câu chuyện đáng buồn'); +0.5 is negated imperative 'đừng buồn#1' and -0.5 is 'chẳng việc_gì phải buồn#1'."
+  },
+  "hoàn_hảo": {
+    "pos_sense_id": "a#01749320",
+    "score": 0.625,
+    "rationale": "Select standalone sense hoàn_hảo#1 (+0.625, 'hoàn toàn tốt và không có khiếm khuyết'); -0.625 is fragment of negated phrase 'không hoàn_hảo#1'."
+  },
+  "thích_hợp": {
+    "pos_sense_id": "a#00560586",
+    "score": 0.75,
+    "rationale": "Select standalone sense thích_hợp#1 (+0.75, 'hợp với yêu cầu và đáp ứng tốt các đòi hỏi'); +0.5 is fragment of 'không thích_hợp#2'."
+  },
+  "may_mắn": {
+    "pos_sense_id": "a#00670741",
+    "score": 0.875,
+    "rationale": "Select standalone sense may_mắn#1 (+0.875, 'cô ta thật may mắn'); -0.875 is fragment of negated phrase 'không may_mắn#1'."
+  },
+  "chấp_nhận": {
+    "pos_sense_id": "a#00017782",
+    "score": 0.625,
+    "rationale": "Select standalone sense chấp_nhận#1 (+0.625, 'đồng ý nhận'); negative candidates are fragments of 'không_thể chấp_nhận#1' and 'rất khó chấp_nhận#1'."
+  },
+  "thuận_tiện": {
+    "pos_sense_id": "a#00604617",
+    "score": 0.375,
+    "rationale": "Select standalone sense thuận_tiện#1 (+0.375, 'phù hợp với sự thoải mái hay mục đích'); -0.625 is fragment of negated phrase 'không thuận_tiện#1'."
+  },
+  "sâu_sắc": {
+    "pos_sense_id": "a#00149120",
+    "score": 0.625,
+    "rationale": "Select standalone sense sâu_sắc#15 (+0.625, 'một triết lí sâu sắc'); +0.5 is fragment of 'gây ấn_tượng sâu_sắc#1'."
+  },
+  "thất_vọng": {
+    "pos_sense_id": "a#00866047",
+    "score": -0.875,
+    "rationale": "Select standalone sense thất_vọng#1 (-0.875, 'mất hết hi vọng'); -0.75 is fragment of 'quá thất_vọng#1'."
+  },
+  "xấu": {
+    "pos_sense_id": "a#00193480",
+    "score": -0.625,
+    "rationale": "Select primary standalone sense xấu#4 (-0.625, 'có hình thức, vẻ ngoài khó coi, gây cảm giác khó chịu')."
+  },
+  "chết": {
+    "pos_sense_id": "a#00095280",
+    "score": -0.75,
+    "rationale": "Select standalone sense chết#1 (-0.75, 'mất khả năng sống'); -0.625 is fragment of 'thật tức chết đi đuợc#1'."
+  },
+  "lịch_sự": {
+    "pos_sense_id": "a#00639842",
+    "score": 0.875,
+    "rationale": "Select standalone sense lịch_sự#2 (+0.875, 'đặc trưng bởi lịch sự và cách cư xử tốt'); -0.625 is fragment of negated phrase 'không lịch_sự#2'."
+  },
+  "thô_tục": {
+    "pos_sense_id": "a#00421002",
+    "score": -0.75,
+    "rationale": "Select standalone sense thô_tục#2 (-0.75, 'thiếu lịch sự, thiếu tế nhị đến mức tục tằn'); -0.625 is fragment of 'lật_đổ thô_tục#1'."
+  },
+  "tự_do": {
+    "pos_sense_id": "v#02422026",
+    "score": 0.5,
+    "rationale": "Select standalone sense tự_do#6 (+0.5, 'không bị các nghĩa vụ hoặc trách nhiệm trói buộc'); -0.75 is fragment of negated phrase 'không tự_do#2'."
+  },
+  "giàu": {
+    "pos_sense_id": "a#00403385",
+    "score": 0.625,
+    "rationale": "Select standalone sense giàu#5 (+0.625); -0.675 is fragment of 'giàu lên vì tham_nhũng#1'."
+  },
+  "lạnh": {
+    "pos_sense_id": "a#01077263",
+    "score": -0.5,
+    "rationale": "Select standalone interpersonal sense lạnh#3 (-0.5, 'thiếu cảm giác ấm áp, thân thiện; một gương mặt lạnh'); -0.75 is fragment of 'bị lạnh#3 / rất lạnh#2'."
+  },
+  "cân_đối": {
+    "pos_sense_id": "a#02138659",
+    "score": 0.75,
+    "rationale": "Select standalone sense cân_đối#1 (+0.75, 'có một hình dạng cân đối và hài lòng'); -0.625 is fragment of negated phrase 'không cân_đối#1'."
+  },
+  "ghét": {
+    "pos_sense_id": "a#001937927",
+    "score": -0.75,
+    "rationale": "Select standalone sense ghét#1 (-0.75, 'không ưa thích, muốn tránh hoặc cảm thấy khó chịu'); -0.675 is fragment of 'ghét cay ghét_đắng#1'."
+  },
+  "sáo_rỗng": {
+    "pos_sense_id": "a#025033055",
+    "score": -0.625,
+    "rationale": "Select standalone sense sáo_rỗng#1 (-0.625, 'không có nội dung gì; lời văn sáo rỗng'); +0.5 is fragment of negated phrase 'không có kiểu nhận_thức sáo_rỗng#4'."
+  },
+  "tươi": {
+    "pos_sense_id": "a#01071198",
+    "score": 0.625,
+    "rationale": "Select standalone sense tươi#5 (+0.625); +0.5 is fragment of 'tươi như hoa#2'."
+  },
+  "tương_thích": {
+    "pos_sense_id": "a#00507464",
+    "score": 0.5,
+    "rationale": "Select standalone sense tương_thích#1 (+0.5, 'kết hợp hài hòa hoặc dễ chịu'); -0.625 is fragment of negated phrase 'không tương_thích#4'."
+  },
+  "xứng_đáng": {
+    "pos_sense_id": "a#00852197",
+    "score": 0.5,
+    "rationale": "Select standalone sense xứng_đáng#2 (+0.5); -0.375 is fragment of negated phrase 'không xứng_đáng#1'."
+  },
+  "độc": {
+    "pos_sense_id": "v#02580678",
+    "score": -0.5,
+    "rationale": "Select standalone sense độc#1 (-0.5, 'hỏng như thể bởi chất độc'); -0.625 is fragment of negated phrase 'không độc#1'."
+  },
+  "bình_tĩnh": {
+    "pos_sense_id": "a#00302761",
+    "score": 0.375,
+    "rationale": "Select standalone sense bình_tĩnh#2 (+0.375, 'làm chủ được tình cảm, hành động'); -0.625 is fragment of 'mất bình_tĩnh#1'."
+  },
+  "bảo_vệ": {
+    "pos_sense_id": "a#01885866",
+    "score": 0.625,
+    "rationale": "Select standalone sense bảo_vệ#1 (+0.625); -0.75 is fragment of 'được bảo_vệ#1'."
+  },
+  "dân_chủ": {
+    "pos_sense_id": "a#00715140",
+    "score": 0.375,
+    "rationale": "Select standalone sense dân_chủ#1 (+0.375); -0.625 is fragment of negated phrase 'phi dân_chủ#1'."
+  },
+  "hoan_nghênh": {
+    "pos_sense_id": "a#02539968",
+    "score": 0.5,
+    "rationale": "Select standalone sense hoan_nghênh#1 (+0.5); +0.625 is fragment of 'đáng hoan_nghênh#1'."
+  },
+  "hợp_lệ": {
+    "pos_sense_id": "a#00938659",
+    "score": 0.5,
+    "rationale": "Select standalone sense hợp_lệ#2 (+0.5, 'vẫn hợp pháp chấp nhận được'); -0.75 is fragment of negated phrase 'không hợp_lệ#1'."
+  },
+  "khoẻ_mạnh": {
+    "pos_sense_id": "a#01170984",
+    "score": 0.75,
+    "rationale": "Select standalone sense khỏe_mạnh#1 (+0.75, 'sức khỏe tốt'); -1.0 is fragment of negated phrase 'không khỏe_mạnh#5'."
+  },
+  "lành_mạnh": {
+    "pos_sense_id": "a#02557357",
+    "score": 0.625,
+    "rationale": "Select standalone sense lành_mạnh#1 (+0.625, 'thái độ lành mạnh'); -0.75 is fragment of negated phrase 'không lành_mạnh#3'."
+  },
+  "mỏng_manh": {
+    "pos_sense_id": "a#001937996",
+    "score": -0.375,
+    "rationale": "Select standalone sense mỏng_manh#1 (-0.375, 'hi vọng mỏng manh'); -0.625 is fragment of 'yếu_đuối mỏng_manh#3'."
+  },
+  "ngăn_chặn": {
+    "pos_sense_id": "a#01167269",
+    "score": 0.75,
+    "rationale": "Select standalone sense ngăn_chặn#2 (+0.75, 'phòng ngừa ngăn chặn'); -0.625 is fragment of 'không bị ngăn_chặn#1'."
+  },
+  "ngưỡng_mộ": {
+    "pos_sense_id": "v#02164694",
+    "score": 0.625,
+    "rationale": "Select standalone sense ngưỡng_mộ#2 (+0.625, 'Tôi rất ngưỡng mộ cô ấy'); +0.875 is fragment of 'đáng ngưỡng_mộ#2'."
+  },
+  "phục_hồi": {
+    "pos_sense_id": "a#01167540",
+    "score": 0.5,
+    "rationale": "Select standalone sense phục_hồi#2 (+0.5, 'thúc đẩy phục hồi sức khoẻ'); +0.625 is fragment of 'phục_hồi chức_năng#3'."
+  },
+  "sốt": {
+    "pos_sense_id": "a#03105742",
+    "score": -0.5,
+    "rationale": "Select standalone sense sốt#1 (-0.5, 'có, gây sốt'); +0.375 is fragment of idiomatic phrase 'tạo cơn sốt#1'."
+  },
+  "tham_nhũng": {
+    "pos_sense_id": "a#01132366",
+    "score": -0.334,
+    "rationale": "Select standalone sense tham_nhũng#1 (-0.334, 'lợi dụng quyền hành để tham ô'); -0.675 is fragment of 'giàu lên vì tham_nhũng#1'."
+  },
+  "thận_trọng": {
+    "pos_sense_id": "a#00325281",
+    "score": 0.75,
+    "rationale": "Select standalone sense thận_trọng#1 (+0.75, 'hiển thị cẩn thận suy tính trước'); -0.375 is fragment of negated phrase 'thiếu thận_trọng#1'."
+  },
+  "thối": {
+    "pos_sense_id": "a#01054630",
+    "score": -0.7,
+    "rationale": "Select standalone sense thối#1 (-0.7, 'có mùi khó ngửi'); -0.625 and -0.5 are fragments of 'bị thối mục#1' and 'bị thối hoại#1'."
+  },
+  "trật_tự": {
+    "pos_sense_id": "a#02423284",
+    "score": 0.125,
+    "rationale": "Select standalone sense trật_tự#2 (+0.125, 'sạch hoặc tổ chức'); -0.5 is fragment of negated phrases 'không trật_tự#1 / mất trật_tự#2'."
+  },
+  "viêm": {
+    "pos_sense_id": "a#01177246",
+    "score": -0.75,
+    "rationale": "Select standalone sense viêm#1 (-0.75, 'quá trình viêm nhiễm'); -0.625 is fragment of 'bị viêm cuống_phổi#1'."
+  },
+  "xấu_hổ": {
+    "pos_sense_id": "v#02508078",
+    "score": -0.5,
+    "rationale": "Select standalone sense xấu_hổ#2 (-0.5, 'cảm giác xấu hổ'); -0.875 is fragment of 'không_biết xấu_hổ#1' and -0.375 is fragment of 'đáng xấu_hổ#2'."
+  },
+  "ác": {
+    "pos_sense_id": "a#02513740",
+    "score": -0.625,
+    "rationale": "Select standalone sense ác#1 (-0.625, 'người hành nghề độc ác'); -0.875 is fragment of 'ác hơn_cả thú#1'."
+  },
+  "đứng_đắn": {
+    "pos_sense_id": "a#02036934",
+    "score": 0.75,
+    "rationale": "Select standalone sense đứng_đắn#4 (+0.75, 'xuất sắc về đạo đức'); -0.625 is fragment of negated phrase 'không đứng_đắn#1'."
+  }
+}

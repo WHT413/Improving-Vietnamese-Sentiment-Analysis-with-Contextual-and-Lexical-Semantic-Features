@@ -122,6 +122,20 @@ class ResolveRuntimeModelDirTests(unittest.TestCase):
                 segmenter.segment("a")
             self.assertEqual(received, [cache_dir.resolve()])
 
+    def test_factory_working_directory_change_is_restored(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            model_dir = create_model_dir(root)
+            original = os.getcwd()
+
+            def factory(_dir, _heap):
+                os.chdir(root)
+                return FakeAnnotator(["ok"])
+
+            segmenter = VnCoreNLPSegmenter(model_dir=model_dir, annotator_factory=factory)
+            segmenter.segment("a")
+            self.assertEqual(os.getcwd(), original)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,1 @@
+"""Frozen 12-dimensional lexicon lookup and projection pipeline."""

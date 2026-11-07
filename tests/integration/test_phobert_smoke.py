@@ -3,9 +3,9 @@ import unittest
 
 import torch
 
-from vnsentiment.backbones.backbone import PhoBertBackbone
-from vnsentiment.backbones.encoder import PhoBertEncoder
-from vnsentiment.backbones.tokenizer import load_phobert_tokenizer
+from vnsentiment.phobert_branch.branch import PhoBertBranch
+from vnsentiment.phobert_branch.encoder import PhoBertEncoder
+from vnsentiment.phobert_branch.tokenizer import load_phobert_tokenizer
 
 
 @unittest.skipUnless(
@@ -20,10 +20,10 @@ class PhoBertSmokeTests(unittest.TestCase):
         device = "cuda" if torch.cuda.is_available() else "cpu"
         encoder = PhoBertEncoder(device=device)
         encoder.model.eval()
-        backbone = PhoBertBackbone(tokenizer, encoder)
+        phobert_branch = PhoBertBranch(tokenizer, encoder)
 
         with torch.no_grad():
-            batch, hidden = backbone.encode(["sản_phẩm này không tệ"])
+            batch, hidden = phobert_branch.encode(["sản_phẩm này không tệ"])
 
         self.assertEqual(batch.input_ids.tolist(), [[0, 265, 23, 17, 4152, 2]])
         self.assertEqual(batch.attention_mask.tolist(), [[1, 1, 1, 1, 1, 1]])

@@ -1,3 +1,5 @@
+"""Load the local slow PhoBERT tokenizer."""
+
 from pathlib import Path
 
 from transformers import AutoTokenizer, PreTrainedTokenizerBase

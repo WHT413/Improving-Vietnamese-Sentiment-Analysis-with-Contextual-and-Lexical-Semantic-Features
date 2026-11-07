@@ -13,3 +13,11 @@ class FakeTokenizer:
         if text in self.pieces:
             return list(self.pieces[text])
         return [ord(char) for char in text]
+
+    def convert_ids_to_tokens(self, ids):
+        reverse = {
+            piece: text
+            for text, pieces in self.pieces.items()
+            for piece in pieces
+        }
+        return [reverse.get(int(piece), str(piece)) for piece in ids]

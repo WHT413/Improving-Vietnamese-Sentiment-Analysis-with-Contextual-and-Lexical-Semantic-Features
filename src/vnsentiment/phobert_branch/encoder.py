@@ -1,3 +1,5 @@
+"""Wrap the PhoBERT transformer encoder."""
+
 from pathlib import Path
 
 import torch

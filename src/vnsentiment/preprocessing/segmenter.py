@@ -105,6 +105,12 @@ class VnCoreNLPSegmenter:
             raise TypeError("text must be a string")
         if self._annotator is None:
             runtime_dir = resolve_runtime_model_dir(self._model_dir)
-            self._annotator = self._annotator_factory(runtime_dir, self._max_heap_size)
+            previous = os.getcwd()
+            try:
+                self._annotator = self._annotator_factory(
+                    runtime_dir, self._max_heap_size
+                )
+            finally:
+                os.chdir(previous)
         sentences = self._annotator.word_segment(text)
         return " ".join(sentences).strip()
