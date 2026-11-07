@@ -43,7 +43,7 @@ def build_phobert_branch(device: str):
     return PhoBertBranch(tokenizer, encoder)
 
 
-def main() -> int:
+def main() -> int:    
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     if hasattr(sys.stderr, "reconfigure"):
@@ -87,6 +87,8 @@ def main() -> int:
         help="Đường dẫn composite_lexicon.json (mặc định v0.2.0).",
     )
     args = parser.parse_args()
+
+    print(f"Device detected: {_resolve_device(args.device)} \n")
 
     map_path = Path(args.map)
     if not map_path.is_file():
