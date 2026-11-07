@@ -6,6 +6,11 @@
 
 Các API cũ như `SentimentModel`, `load_lexicon`, `normalize_vietnamese` và `train_one_epoch` không còn khả dụng. Backup source/test trước reset nằm trong `artifacts/backups/`, có SHA-256 manifest được xác minh trước khi xóa. Không import code từ backup vào package mới.
 
+## Lệnh tải datasets bằng gdown 
+```python
+python -c "import gdown; gdown.download_folder(url='https://drive.google.com/drive/folders/1HP_FwOSj4wMBTskLz4FqgNyt1qz2eiZW', output='./data')"
+```
+
 ## Môi trường và kiểm thử
 
 Python >= 3.12, dùng Conda `nlpdevelop`; không tạo `.venv` trong workspace. Với máy hiện tại:
