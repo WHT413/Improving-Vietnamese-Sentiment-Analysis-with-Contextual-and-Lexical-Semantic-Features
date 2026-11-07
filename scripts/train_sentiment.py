@@ -7,6 +7,7 @@ import argparse
 import sys
 from pathlib import Path
 
+MIN_EPOCH, MAX_EPCOHS = 1, 100
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
@@ -43,8 +44,8 @@ def _parse_args():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--checkpoint", default=str(DEFAULT_CHECKPOINT))
     args = parser.parse_args()
-    if not 1 <= args.epochs <= 10:
-        parser.error("--epochs must be between 1 and 10")
+    if not MIN_EPOCH <= args.epochs <= MAX_EPCOHS:
+        parser.error(f"--epochs must be between {MIN_EPOCH} and {MAX_EPCOHS}")
     return args
 
 
